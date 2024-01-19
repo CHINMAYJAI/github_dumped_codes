@@ -1,7 +1,7 @@
 // Guessing the number game.
 // Created by CHINMAY JAIN.
 // Dated: 09-12-2023
-
+// chinmay jain
 #include <stdio.h>
 #include <stdlib.h> // used to import the random number.
 #include <time.h>   // time 0 to change the number.
