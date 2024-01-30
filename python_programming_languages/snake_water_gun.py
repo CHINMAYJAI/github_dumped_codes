@@ -1,5 +1,5 @@
 # 1.snake, 2.water, 3.gun
-# created by chinmay jain
+# created by Chinmay Jain
 import random
 
 print("Welcome to the game!")
