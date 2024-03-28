@@ -4,12 +4,13 @@ from pymongo import MongoClient
 
 # Submit button (at backend mongodb is working)
 def _submitButton() :
+    """Function is used to save the data at mongodb"""
     connection_establish = MongoClient("localhost",27017) # establishing the connection between mongodb and python
     user_name = str(input("Please enter your name: ")) 
     db = connection_establish[user_name] # creating the database of name same as user
     contacts_collection = db["contacts"] # creating the collection named as contacts
 
-
+    # TODO: complete the remaining code 
 
 
 
