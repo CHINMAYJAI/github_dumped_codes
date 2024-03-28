@@ -1,0 +1,57 @@
+from tkinter import *
+from pymongo import MongoClient
+
+
+# Submit button (at backend mongodb is working)
+def _submitButton() :
+    connection_establish = MongoClient("localhost",27017) # establishing the connection between mongodb and python
+    user_name = str(input("Please enter your name: ")) 
+    db = connection_establish[user_name] # creating the database of name same as user
+    contacts_collection = db["contacts"] # creating the collection named as contacts
+
+
+
+
+
+# Logic for GUI
+root = Tk()
+root.title("Contact Book")
+root.geometry("444x444")
+root.minsize(444,444)
+
+# Setting the frames for Labels 
+Frame1_forLabels = Frame(root).grid(row=0,column=0)
+Frame2_forLabels = Frame(root).grid(row=1,column=0)
+Frame3_forLabels = Frame(root).grid(row=2,column=0)
+Frame4_forLabels = Frame(root).grid(row=3,column=0)
+
+# Labels
+Label(Frame1_forLabels,text="First Name",font="comicsansms 15").grid(row=0,column=0)
+Label(Frame2_forLabels,text="Last Name",font="comicsansms 15").grid(row=1,column=0)
+Label(Frame3_forLabels,text="Phone Number",font="comicsansms 15").grid(row=2,column=0)
+Label(Frame4_forLabels,text="Occupation",font="comicsansms 15").grid(row=3,column=0)
+
+# Entry widget for inputing the details of the contact
+
+# variables for creating entry widget
+FirstNameVar = StringVar()
+LastNameVar = StringVar()
+PhoneNumberVar = StringVar()
+OccupationVar = StringVar()
+
+# Setting the frames for entry widget 
+Frame1_entryWidgets = Frame(root).grid(row=0,column=1)
+Frame2_entryWidgets = Frame(root).grid(row=1,column=1)
+Frame3_entryWidgets = Frame(root).grid(row=2,column=1)
+Frame4_entryWidgets = Frame(root).grid(row=3,column=1)
+
+Entry(Frame1_entryWidgets,textvariable=FirstNameVar).grid(row= 0,column=1)
+Entry(Frame2_entryWidgets,textvariable=LastNameVar).grid(row= 1,column=1)
+Entry(Frame3_entryWidgets,textvariable=PhoneNumberVar).grid(row= 2,column=1)
+Entry(Frame4_entryWidgets,textvariable=OccupationVar).grid(row= 3,column=1)
+
+
+# button for saving the contact
+Button(root,text = "Save",command=_submitButton,padx=15,relief=RIDGE,borderwidth=5).grid(row=4,column=1,pady=15)
+
+root.mainloop()
