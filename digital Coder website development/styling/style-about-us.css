@@ -1,0 +1,24 @@
+/* sets the founder card at the center of the given x-axis and also beautify the card by adding border */
+.founder-card{
+    margin-top: 5vh;
+    border: 2px solid black;
+    
+}
+
+/* formats the card title */
+.founder-card .card-body .card-title{
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.founder-card .card-body{
+    display: inline;
+
+}
+
+
+/* formats the content in the about page */
+.content{
+    padding: 2vh 1vh;
+    font-size: large;
+}

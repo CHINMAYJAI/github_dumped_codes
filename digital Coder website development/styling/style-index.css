@@ -1,0 +1,35 @@
+/* sets the height of the carousel */
+.carousel .carousel-inner .carousel-item {
+    height: 50vh;
+}
+
+/* sets the color of the content written in carousel heading */
+#carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption h5 {
+    font-size: xx-large;
+    color: blueviolet;
+}
+
+/* sets the color of the content written in carousel description/paragraph */
+#carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p {
+    color: red;
+}
+
+/* increases the size of the content */
+.content p {
+    font-size: large;
+    
+    margin: 1vh 2vh;
+}
+
+
+/* setting the blog card and technology news card in one line using flex property */
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.coding-card{
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    margin-left: 85vh;
+}
