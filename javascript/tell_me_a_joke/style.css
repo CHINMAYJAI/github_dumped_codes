@@ -1,20 +1,25 @@
+/* setting the height and margin of the webpage at parental body */
+
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 
-/* all the properties are applied on the span inline element */
-span{
-    margin: 300px; /*used to give the margin from all side*/
-    border: 3px solid black;
-    background-color: cyan;
-    height: 10vh; /* height of joke box*/
-    font-size: large;
-}
-
-/* used to centerlizing the element  */
-.joke{
+/* centralizing the main body content at the center of this page since flexbox property applies to the childrem */
+body{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* beautifying the content so that it looks better */
+.joke{
+    background-color: cyan;
+    padding: 4vh;
+    border: 3px dotted;
 }
